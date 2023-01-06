@@ -38,8 +38,18 @@ public class StreamAPI {
         
         List<Integer> collectedList = list.stream().sorted((i,i2) -> i2.compareTo(i)).filter(i-> i%10==0).collect(Collectors.toList());
         System.out.println("");
-        collectedList.forEach(i->System.out.print(i+"|"));
+        collectedList.forEach(System.out::print); // we can CALL BY METHOD LIKE THIS
+        System.out.println("");
+        collectedList.forEach(PrintInt::print); // we can CALL BY METHOD LIKE THIS this is method reference, we are passing method as a parameter.
         System.out.println("");
         
     }
+}
+
+class PrintInt{
+
+    static void print(int i){
+        System.out.print(i+"|");
+    }
+    
 }
