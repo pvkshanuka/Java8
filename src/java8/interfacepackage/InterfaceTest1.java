@@ -24,39 +24,42 @@ public class InterfaceTest1 {
         System.out.println("");
         c.add();
         c.show();
+        
+//        We dont need to override show method in A and B because It's implemented interfacers have only single defined show method.
+//        But we should override show method in C because its implemented interfacers have multiple defined show methods
 
     }
 
 }
 
-class A implements One {
+class A implements One, Two {
 
     @Override
     public void add() {
-        System.out.println("A impl One add.");
+        System.out.println("A impl One, Two add.");
     }
 
 }
 
-class B implements Two {
+class B implements One, Two {
 
     @Override
     public void add() {
-        System.out.println("B impl Two add.");
+        System.out.println("B impl One, Two add.");
     }
 
 }
 
-class C implements One, Two {
+class C implements One, Two, Three {
 
     @Override
     public void add() {
-        System.out.println("C impl One, Two add.");
+        System.out.println("C impl One, Two, Three add.");
     }
 
     @Override
     public void show() {
-        System.out.println("C impl One, Two show.");
+        System.out.println("C impl One, Two, Three show.");
     }
 }
 
@@ -71,6 +74,12 @@ interface One {
 }
 
 interface Two {
+
+    void add();
+
+}
+
+interface Three {
 
     void add();
 
