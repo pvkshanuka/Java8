@@ -45,7 +45,7 @@ public class ForEachMethod {
     static void forEach(List<Integer> integers) {
 
 //        This is Lambda expression
-        integers.forEach(i -> System.out.print(i + "|"));
+        integers.forEach(i -> System.out.print(i + "|")); // Lambda  //Consumer
         System.out.println("");
         
     }
