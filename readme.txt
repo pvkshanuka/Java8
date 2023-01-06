@@ -1,5 +1,6 @@
 Java 8 new features
 
-1) Functional programming
-2) Lambda expression
-3) Stream API
+1) Can define methods in Iterfacers
+2) Functional programming
+3) Lambda expression
+4) Stream API
